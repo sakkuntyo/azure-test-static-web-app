@@ -20,6 +20,13 @@
         document.querySelector('#name').textContent = text;
     }());
     </script>
+        <script>
+          (async function() {
+              const { text } = await( await fetch(`/api/HttpTrigger2`)).json();
+              document.querySelector('#name').textContent = text;
+          }());
+          </script>
+      
 </body>
 
 </html>
